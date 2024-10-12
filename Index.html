@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Péliculas</title>
+    <!-- Enclazamos al Css -->
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <!-- Este script nos permite acceder a las funciones para que los banners se desplacen automaticamente o manualmente -->
+    <script src="Js/index.js">  </script>
+    <script>setInterval('nextImage()', 3000);</script>
+    <!-- Este metodo predefiniodo de JS proporciona un intervalo para que se ejecute la fucion que hemos definido  -->
+
+</head>
+
+<body>
+    <!-- creamos la cabecera y con sus divs separados y ordenados contienen el logo, buscador, ver cartelera y contacto -->
+    <div class="cabecera">
+        <div class="anchocabecera">
+            <div class="Imagen-Logo">
+                <img class="logo" src="assets/LogoCartelHub.jpg">
+            </div>
+            <div class="buscador">
+                <select>
+                    <optgroup label="Cines">
+                        <option value="">Selecciona una opción</option>
+                        <option>Megarama (Granada)</option>
+                        <option>Ocine Serrallo(Granada)</option>
+                        <option>La loma cines (jaen)</option>
+                    </optgroup>
+                </select>
+                <input type="button" value="Buscar" onclick="Anterior">
+            </div>
+            <div class="contacto">
+                <input type="button" value="Contacto">
+            </div>
+        </div>
+    </div>
+    <nav class="navegador">
+        <div class="anchonavegador">
+            <ul>
+                <li><!-- para realizar en el futuro -->
+                    <a href="()">Inicio</a>
+                </li>
+                <li><!-- para realizar en el futuro -->
+                    <a href="">Cartelera</a>
+                </li>
+                <li><!-- para realizar en el futuro -->
+                    <a href="">Estrenos</a>
+                </li>
+                <li><!-- para realizar en el futuro -->
+                    <a href="">Próximos estrenos</a>
+                </li>
+                <li><!-- para realizar en el futuro -->
+                    <a href="">Eventos/Fiestas</a>
+                </li>
+                <li><!-- para realizar en el futuro -->
+                    <a href="">Galería</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Botones de desplazamiento del banner  -->
+    <div class="deslizador-Imagen">
+        <!-- Este el banner que ponemos por defecto, y se modifica cuando damos next o before ademas de cada 3 segundos  -->
+        <div id="banners">
+            <img class="imagenes-banners" src="assets/banners/LaTrampa.jpg">
+        </div>
+        <div class="bontonesDesplazamiento">
+            <button class="b-anterior" onclick="beforeImage()"><b>-</b></button>
+            <button class="b-siguiente" onclick="nextImage()"><b>+</b></button>
+        </div>
+    </div>
+    <!-- Datos sobre nuestras peliculas -->
+    <div class="peliculas">
+        <h2>Películas</h2>
+        <div class="listapeliculas">
+            <div class="pelicula-informacion">
+                <img src="assets/peliculas/ElClubDeLaLucha.jpg">
+                <p>El Club De La lucha</p>
+                <p>Duración: 139 min</p>
+                <p>Genero: Acción y suspense</p>
+            </div>
+            <div class="pelicula-informacion">
+                <img src="assets/peliculas/LaNiebla.jpg">
+                <p>La Niebla</p>
+                <p>Duración: 126 min</p>
+                <p>Genero: Terror y Ciencia Ficción</p>
+            </div>
+            <div class="pelicula-informacion">
+                <img src="assets/peliculas/LaTrampa.jpg">
+                <p>La Trampa</p>
+                <p>Duración: 105 min</p>
+                <p>Genero: Thriler</p>
+            </div>
+            <div class="pelicula-informacion">
+                <img src="assets/peliculas/ScootPilgrim.jpg">
+                <p>Scoot Pilgrim</p>
+                <p>Duración: 112 min</p>
+                <p>Genero: Acción y Comedia</p>
+            </div>
+            <div class="pelicula-informacion">
+                <img src="assets/peliculas/Soul.jpg">
+                <p>Soul</p>
+                <p>Duración: 100 min</p>
+                <p>Genero: Animación y Fantasia</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Creamos un pie de pagina y lo dividimos en tres zonas -->
+    <div class="pie">
+        <!-- Clase padre -->
+        <div class="pie-padre">
+            <!-- Pie lado izquierda con Nobre de la empresa y mi proyecto -->
+            <div class="pie-izquierda">
+                <!-- span para cambiar el color de la palabra hub -->
+                <h2>Cartel<span class="colorHub">Hub</span></h2>
+                <p>Proyecto desarrollado por Antonio Atienza Cano</p>
+            </div>
+            <div class="pie-centro">
+
+            </div>
+            <div class="pie-derecha">
+                <!-- Redes, sin funcionalidad(vacias) -->
+                <h3>Siguenos</h3>
+                <ul>
+                    <li>
+                        <a href=""><img src="assets/Iconos/Facebook_16px.png"> Facebook</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="assets/Iconos/Instagram_16px.png"> Instagram</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="assets/Iconos/Twitter_16px.png"> Twitter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
